@@ -41,6 +41,31 @@ html, body, .page {
   position: absolute;
   z-index: -1;
 }
+.page_contact {
+  position: relative;
+  background-size: cover;
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+}
+.page_skills {
+  /*background-image: url(../images/floor.jpg);*/
+  background-size: cover;
+  /*background-repeat: repeat;*/
+  height: 100%;
+  width: 100%;
+}
+/*.page_contact:before {
+  content: ' ';
+  width: 100%;
+  height: 100%;
+  left: 0;
+  /*opacity: 0.5;*/
+  background-size: cover;
+  background-image: url(../images/fiber.jpg);
+  position: absolute;
+  /*z-index: -1;*/
+}*/
 /*********************************
             SKILLS
 *********************************/
@@ -65,6 +90,13 @@ html, body, .page {
   background-image: url(../images/floor.jpg);
   background-size: cover;
   background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+}
+.page_contact {
+  background-image: url(../images/fibermobile.png);
+  background-size: cover;
+  /*background-repeat: repeat;*/
   height: 100%;
   width: 100%;
 }
@@ -100,6 +132,10 @@ ul {
 }*/
 .navbar_skills a {
   color: whitesmoke;
+}
+.navbar_contact a {
+  color: teal;
+  background-color: black;
 }
 .navbar_skills a:hover {
   color: black;
@@ -142,9 +178,9 @@ ul {
   cursor: default;
 
 }
-.navbar_contact a {
+/*.navbar_contact a, {
   color: rgba(0,0,0,.8);
-}
+}*/
 
 p a {
   text-decoration: none;
@@ -278,6 +314,29 @@ body{
   margin: 0 20px 0 20px;
 }
 /****************************
+        contacts
+****************************/
+.git {
+  position: absolute;
+  top: 56%;
+  left: 52%;
+}
+.linkedin {
+  position: absolute;
+  top: 18%;
+  left: 52%;
+}
+.gmail {
+  position: absolute;
+  top: 84%;
+  left: 53%;
+}
+.emailwrite {
+  position: absolute;
+  top: 86%;
+  left: 63%;
+}
+/****************************
         MEDIA QUERIES
 ****************************/
 @media screen and (min-width: 678px) {
@@ -295,6 +354,13 @@ body{
     background-repeat: no-repeat;
     /*height: 100%;
     width: 100%;*/
+  }
+  .page_contact {
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
   }
   #garage {
     height: 100%;
@@ -315,5 +381,19 @@ body{
 @media screen and (max-width: 597px) {
   .featured_projects {
     display: block;
+  }
+}
+/*************
+   Connect
+**************/
+@media screen and (max-width: 597px) {
+  .contactDiv, .linkedin, .git, .gmail, .emailwrite {
+    display: block;
+    position: static;
+    margin: 20px 0;
+    /*margin: 20px;*/
+  }
+  .emailwrite {
+    color: whitesmoke;
   }
 }
