@@ -134,7 +134,7 @@ ul {
   color: whitesmoke;
 }
 .navbar_contact a {
-  color: teal;
+  color: rgb(106, 195, 207);
   background-color: black;
 }
 .navbar_skills a:hover {
@@ -325,6 +325,7 @@ body{
   position: absolute;
   top: 18%;
   left: 52%;
+  transform: rotate(8deg);
 }
 .gmail {
   position: absolute;
@@ -333,8 +334,15 @@ body{
 }
 .emailwrite {
   position: absolute;
-  top: 86%;
-  left: 63%;
+  top: 84%;
+  left: 62%;
+}
+.emailwrite h4 {
+  padding: 20px 40px 20px 40px;
+
+}
+.fiberBg {
+  opacity: .8;
 }
 /****************************
         MEDIA QUERIES
@@ -376,7 +384,7 @@ body{
   }
 }
 /*************
-   projects
+   projects MQ
 **************/
 @media screen and (max-width: 597px) {
   .featured_projects {
@@ -384,16 +392,28 @@ body{
   }
 }
 /*************
-   Connect
+   Connect MQ
 **************/
-@media screen and (max-width: 597px) {
+@media screen and (max-width: 790px) {
   .contactDiv, .linkedin, .git, .gmail, .emailwrite {
     display: block;
     position: static;
     margin: 20px 0;
     /*margin: 20px;*/
   }
+  .linkedin {
+    transform: rotate(14deg);
+    margin: 64px 0;
+  }
   .emailwrite {
     color: whitesmoke;
+  }
+  .emailwrite h4 {
+    padding: 24px;
+  }
+  .gmail {
+    display: block;
+    position: static;
+    margin: 44px 0 0 0;
   }
 }
