@@ -362,13 +362,7 @@ body{
     /*height: 100%;
     width: 100%;*/
   }
-  .page_contact {
-    background-image: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-  }
+
   #garage {
     height: 100%;
     width: 100%;
@@ -393,26 +387,37 @@ body{
 /*************
    Connect MQ
 **************/
+@media screen and (min-width: 790px) {
+  .page_contact {
+    background-image: none;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 790px) {
   .contactDiv, .linkedin, .git, .gmail, .emailwrite {
     display: block;
     position: static;
-    margin: 20px 0;
+    margin: auto;
     /*margin: 20px;*/
   }
   .linkedin {
     transform: rotate(14deg);
-    margin: 64px 0;
+    margin: auto;
   }
   .emailwrite {
     color: whitesmoke;
   }
   .emailwrite h4 {
-    padding: 24px;
+    /*padding: 24px;*/
+    /*background: #333;*/
+
   }
   .gmail {
     display: block;
     position: static;
-    margin: 44px 0 0 0;
+    margin: auto;
   }
 }
