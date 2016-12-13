@@ -171,12 +171,17 @@ ul {
 .navbar_projects a {
   color: #222;
 }
-.navbar_projects a:hover, .navbar_contact a:hover, .navbar_index a:hover{
+.navbar_projects a:hover, .navbar_index a:hover {
   color: #1D3B63;
   background: white;
   transition: .2s;
   cursor: default;
-
+}
+.navbar_contact a:hover {
+  color: #111;
+  background: white;
+  transition: .2s;
+  cursor: default;
 }
 /*.navbar_contact a, {
   color: rgba(0,0,0,.8);
@@ -343,6 +348,17 @@ body{
 .fiberBg {
   opacity: .8;
 }
+
+
+
+
+
+
+
+
+
+
+
 /****************************
         MEDIA QUERIES
 ****************************/
@@ -374,6 +390,7 @@ body{
   }
   .skills-toolbox-div {
     display: none;
+    /*background-image: url(../images/floor.jpg);*/
   }
 }
 /*************
@@ -397,6 +414,10 @@ body{
   }
 }
 @media screen and (max-width: 790px) {
+  .top .navbar_contact li {
+    width: 126px;
+    margin: 5px;
+  }
   .contactDiv, .linkedin, .git, .gmail, .emailwrite {
     display: block;
     position: static;
