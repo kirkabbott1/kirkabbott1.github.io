@@ -425,9 +425,13 @@ body{
   }
   .contactDiv, .linkedin, .git, .gmail, .emailwrite {
     display: block;
-    position: static;
+    position: relative;
     margin: auto;
+    position: static;
     /*margin: 20px;*/
+  }
+  .contactDiv img {
+    width: 60%;
   }
   .linkedin {
     transform: rotate(14deg);
@@ -435,6 +439,9 @@ body{
   }
   .emailwrite {
     color: whitesmoke;
+    position: relative;
+    left: -2%;
+    top: 83%;
   }
   .emailwrite h4 {
     /*padding: 24px;*/
@@ -442,8 +449,12 @@ body{
 
   }
   .gmail {
-    display: block;
-    position: static;
-    margin: auto;
+    width: 40%;
+  }
+  .gmail img {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    width: 34%;
   }
 }
