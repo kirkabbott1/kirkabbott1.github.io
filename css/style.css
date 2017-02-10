@@ -2,6 +2,12 @@ html, body, .page {
   height: 100%;
   width: 100%;
 }
+.mergeBranch {
+  margin: 0 10px;
+}
+.mergeBranch img {
+  width: 100%;
+}
 /*********************************
             NAVBAR
 *********************************/
@@ -48,12 +54,31 @@ html, body, .page {
   background: #fff;
   z-index: 0;
 }
-.page_contact {
+/*.page_contact {
   position: relative;
   background-size: cover;
   background-repeat: repeat;
   height: 100%;
   width: 100%;
+}*/
+.page_contact {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.page_contact::after {
+  content: "";
+  /*background: url(../images/fiber.jpg);*/
+  background: url(../images/fibermobile.png);
+  background-size: cover;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 .page_skills {
   /*background-image: url(../images/floor.jpg);*/
@@ -69,11 +94,11 @@ html, body, .page {
   height: 100%;
   left: 0;
   /*opacity: 0.5;*/
-  background-size: cover;
+  /*background-size: cover;
   background-image: url(../images/fiber.jpg);
-  position: absolute;
+  position: absolute;*/
   /*z-index: -1;*/
-}*/
+/*}*/
 /*********************************
             SKILLS
 *********************************/
@@ -101,13 +126,12 @@ html, body, .page {
   height: 100%;
   width: 100%;
 }
-.page_contact {
+/*.page_contact {
   background-image: url(../images/fibermobile.png);
   background-size: cover;
-  /*background-repeat: repeat;*/
   height: 100%;
   width: 100%;
-}
+}*/
 
 .top {
   color: rgba(0, 0, 0,.8);
@@ -237,7 +261,7 @@ body{
   /* font-size: 90px; */
   z-index: 2;
   text-align: center;
-  font: 500 84px/1.0 'Just Another Hand', Helvetica, sans-serif;
+  font: 500 60px/1.25 'Just Another Hand', Helvetica, sans-serif;
   /* color: rgb(18, 60, 98); */
   text-shadow: 0 3px 0 #5e5e5e, 0 5px 0 #4d4d4d, 0 7px 0 #3c3c3c, 0 9px 0 #2b2b2b, 3px 8px 15px rgba(0,0,0,0.1), 3px 8px 5px rgba(0,0,0,0.3);
 }
@@ -323,8 +347,8 @@ body{
   border: 2px solid #fff;
   cursor: default;
 }
-.memDiv, .bjDiv {
-  margin: 0 20px 0 20px;
+.memDiv, .bjDiv, .MusicDiv {
+  margin: 0 20px 20px 20px;
 }
 /****************************
         contacts
@@ -386,7 +410,9 @@ body{
     /*height: 100%;
     width: 100%;*/
   }
-
+  .page_contact::after {
+    background: url(../images/fibermobile.png);
+  }
   #garage {
     height: 100%;
     width: 100%;
@@ -409,16 +435,36 @@ body{
     display: block;
   }
 }
+@media screen and (min-width: 450px) {
+  .mergeBranch img {
+    width: 430px;
+  }
+  .homeTitle {
+    font: 500 84px/1.5 'Just Another Hand', Helvetica, sans-serif;
+  }
+}
 /*************
    Connect MQ
 **************/
-@media screen and (min-width: 790px) {
-  .page_contact {
+@media screen and (min-width: 748px) {
+  /*.page_contact {
     background-image: none;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+  }*/
+  .page_contact::after {
+    content: "";
+    /*background: url(../images/fiber.jpg);*/
+    background: url(../images/fibermobile.png);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: relative;;
+    z-index: -1;
   }
 }
 @media screen and (max-width: 800px) {
