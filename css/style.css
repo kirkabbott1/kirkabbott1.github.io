@@ -235,6 +235,7 @@ display: inline-block;
   text-decoration: none;
   color: #222;
   cursor: default;
+  z-index: 5;
 }
 .homepic:active {
   transform: translateY(1px);
@@ -381,15 +382,96 @@ body{
   opacity: .8;
 }
 
+.MusicDiv h4, .memDiv h4, .bjDiv h4 {
+  margin-bottom: 2px;
+}
 
+.logo {
+  font-family: 'Calligraffitti', cursive;
+  position: absolute;
+  top: -42px;
+  left: 21px;
+  z-index: 5;
+}
+.logo h5 {
+  color: #222;
+  font-size: 30px;
+  font-weight: bold;
+}
+.logoSkills {
+  color: white;
+  font-family: 'Calligraffitti', cursive;
+  position: absolute;
+  top: 7px;
+  left: 25px;
+  z-index: 5;
+}
+.logoSkills h5 {
+  font-size: 30px;
+  color: white;
 
+}
+.logoContact h5 {
+  color: white;
+  font-size: 30px;
 
+}
+.logoContact a, .logoSkills a, .logo a {
+  text-decoration: none;
+}
 
-
-
-
-
-
+/****************************
+        ABOUT 2
+****************************/
+.page_about2 {
+  background: url(../images/blueBG2.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+/*.page_about2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.page_about2::after {
+  content: "";
+  background: url(../images/blueBG2.jpg);
+  background-size: cover;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}*/
+/*background: url(../images/fiber.jpg);*/
+.about2_pic {
+  margin: 2em auto;
+}
+.about2_pic img{
+  border-radius: 100px;
+  width: 200px
+}
+.about2_summary {
+  /*float: left;*/
+  /*width: 30%;*/
+  width: 94%;
+  /*margin: auto;*/
+  text-align: center;
+  font-family: 'Alegreya Sans', sans-serif;
+  color: white;
+  /*overflow: scroll;*/
+  padding: 0 3%;
+  line-height: 1.5em;
+}
+.about2_summary p {
+ font-size: 20px;
+}
 
 /****************************
         MEDIA QUERIES
@@ -400,6 +482,18 @@ body{
   }
   ul {
     max-width: none;
+  }
+  .about2_summary {
+    width: 678px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 422px) {
+  .logo, .logoSkills, .logoContact {
+    display: none;
+  }
+  .featured_projects img {
+    width: 250px;
   }
 }
 @media screen and (min-width: 748px) {
