@@ -3,6 +3,13 @@ html, body, .page {
   width: 100%;
   /*font-family: 'Alegreya Sans', sans-serif;*/
 }
+.clear::before, .clear::after {
+  content: "";
+  display: table;
+}
+.clear::after {
+  clear: both;
+}
 .mergeBranch {
   margin: 0 10px;
 }
@@ -436,6 +443,7 @@ body{
   width: 100%;
   overflow: auto;
 }
+
 /*.page_about2 {
   width: 100%;
   height: 100%;
@@ -457,10 +465,29 @@ body{
 /*background: url(../images/fiber.jpg);*/
 .about2_pic {
   margin: 2em auto;
+  color: white;
 }
 .about2_pic img{
   border-radius: 100px;
   width: 200px
+}
+.resumeTag a img {
+  width: 43px;
+  margin-top: .5em;
+  display: inline-block;
+  float: left;
+}
+.resumeTag a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Alegreya Sans', sans-serif;
+  display: inline-block;
+}
+.resumeTag span {
+  margin-left: .5em;
+  display: block;
+  float: left;
+  margin-top: .85em;
 }
 .about2_summary {
   /*float: left;*/
@@ -477,7 +504,12 @@ body{
 .about2_summary p {
  font-size: 20px;
 }
-
+.emailwrite h4 {
+  font-family: 'Alegreya Sans', sans-serif;
+}
+.resumelink {
+  float: left;
+}
 /****************************
         MEDIA QUERIES
 ****************************/
@@ -488,17 +520,24 @@ body{
   ul {
     max-width: none;
   }
-  .about2_summary {
-    width: 678px;
-    margin: auto;
+  .about2_summary p {
+    font-size: .9em;
+    /*width: 678px;
+    margin: auto;*/
   }
   .about2_pic img {
+    /*float: left;*/
+    /*border-radius: 100px;*/
+    /*width: 200px;*/
+    /*margin-left: 13%;*/
+    /*display: inline-block;*/
+  }
+  .about2_pic {
     float: left;
-    border-radius: 100px;
-    width: 200px;
-    margin-left: 3%;
-    display: inline-block;
+    margin: 2em 1em;
+  }
 }
+
 @media screen and (max-width: 422px) {
   .logo, .logoSkills, .logoContact {
     display: none;
@@ -571,6 +610,12 @@ body{
     position: relative;;
     z-index: -1;
   }
+  .about2_pic {
+    width: 30%;
+  }
+  .about2_summary {
+    /*width: 70%;*/
+  }
 }
 @media screen and (max-width: 800px) {
   .top .navbar_contact li, .top .navbar_index li {
@@ -614,5 +659,21 @@ body{
     top: 75%;
     left: 35%;
     width: 34%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .about2_summary {
+    width: 64%;
+    padding: 0 3%;
+    float: left;
+  }
+  .about2_pic {
+    width: 28%;
+    margin: 2em 1%;
+  }
+  .pageWrapper {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
